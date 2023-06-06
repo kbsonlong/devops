@@ -1,14 +1,49 @@
-site_name: DevOPS持续集成
+site_name: 运维知识体系
 nav:
-- Home: index.md
-- User Guide:
-    # - index: user-guide/index.md
-    - Tracking and Deployment Strategies: user-guide/tracking_strategies.md
-- Blog:
+- 主页: index.md
+- 持续集成:
+    - Devops: devops/index.md
+    - Gitlab: devops/gitlab.md
+    - Jenkins: devops/jenkins.md
+    - ArgoCD: devops/argocd.md
+    - ArgoWorkflows: devops/argoworkflows.md
+    - ArgoEvents: devops/argoevents.md
+    - ArgoRollouts: devops/argorollouts.md
+- Kubernetes:
+    - Quick Start: kubernetes/Quick.md
+    - Kube-Scheduler: kubernetes/kube-scheduler.md
+    - Kube-Controller-Manager: kubernetes/kube-controller-manager.md
+    - Kube-Proxy: kubernetes/kube-proxy.md
+    - Kubelet: kubernetes/kubelet.md
+    - Kube-APIServer: kubernetes/kube-apiserver.md
+    - CNI: kubernetes/cni.md
+    - CSI: kubernetes/csi.md
+    - Ingress:
+      - Quick Start: ingress/Quick.md
+    - Openkruise:
+      - Quick Start: openkruise/Quick.md
+- 云原生:
+    - 快速开始: user-guide/Quick.md
+    - Prometheus:
+      - Quick Start: prometheus/Quick.md
+    - VictoriaMetrics:
+      - Quick Start: victoriametrics/Quick.md
+    - Harbor:
+      - Quick Start: harbor/Quick.md
+    - Istio:
+      - Quick Start: istio/Quick.md
+    - KubeSphere:
+      - Quick Start: kubesphere/Quick.md
+- Code:
+    - Python: code/python.md
+    - Golang:
+         - Gin: code/gin.md
+         - Kubebuilder: code/kubebuilder.md
+    - Shell: code/shell.md
+- 博客:
     - Introduction: blog/index.md
-- About:
+- 关于:
     - License: about/license.md
-    - Release Notes: about/release-notes.md
 theme:
   name: material
   custom_dir: overrides
@@ -44,8 +79,8 @@ plugins:
   - search:
       # lang: zh
       separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
-  - offline:
-      enabled: !ENV [OFFLINE, false]
+  # - offline:
+  #     enabled: !ENV [OFFLINE, false]
   - tags:
       enabled: !ENV [CI, false]
       tags_file: tags.md
