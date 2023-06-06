@@ -21,6 +21,10 @@ jobs:
           path: .cache
           restore-keys: |
             mkdocs-material-
-      - run: pip install -r requirements.txt
-      - run: mike deploy --push --update-aliases 0.1 latest
-      - run: mkdocs gh-deploy --force
+      - name: Setup doc deploy
+        run: |
+          git config --global user.name kbsonlong
+          git config --global user.email kbsonlong@gmail.com
+          pip install -r requirements.txt
+          mike deploy --push --update-aliases 0.1 latest
+          mkdocs gh-deploy --force
