@@ -1,0 +1,75 @@
+site_name: DevOPS持续集成
+theme:
+  name: material
+  custom_dir: overrides
+  language: zh
+  icon:
+    repo: fontawesome/brands/git-alt
+    edit: material/pencil
+    view: material/eye
+  palette:
+    scheme: default
+    primary: teal
+  features:
+    - navigation.footer
+    - content.action.edit
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - navigation.indexes
+    - toc.follow
+    # - toc.integrate
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - search.share
+    - header.autohide
+    - announce.dismiss
+
+plugins:
+  - social
+  - search:
+      lang: zh
+      separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
+  - offline:
+      enabled: !ENV [OFFLINE, false]
+  - tags:
+      enabled: !ENV [CI, false]
+      tags_file: tags.md
+      # tags_extra_files:
+      #   compatibility.md:
+      #     - compat
+      #   web.md:
+      #     - html
+      #     - js
+      #     - css
+# plugins:
+#   - git-revision-date-localized:
+#       enable_creation_date: true
+#       enabled: !ENV [CI, false]
+#       type: date
+#       fallback_to_build_date: true
+#   - git-authors
+#   - git-committers:
+#       enabled: !ENV [CI, false]
+#       repository: kbsonlong/argo
+#       branch: main
+repo_url: https://github.com/kbsonlong/argo
+repo_name: kbsonlong/argo
+edit_uri: edit/main/docs/
+extra:
+  version:
+    provider: mike
+    default: stable
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/kbsonlong
+    - icon: fontawesome/solid/paper-plane
+      link: mailto:kbsonlong@gmail.com
+    - icon: fontawesome/brands/docker
+      link: https://hub.docker.com/u/alongparty
+
+copyright: Copyright &copy; 2018 - 2023 Martin Donath
