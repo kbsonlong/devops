@@ -108,7 +108,7 @@ edit_uri: edit/main/docs/
 extra:
   version:
     provider: mike
-    default: stable
+    # default: stable
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/kbsonlong
