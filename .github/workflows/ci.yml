@@ -30,4 +30,4 @@ jobs:
           pip install -r requirements.txt
           mike deploy --push --update-aliases 0.3 latest
           mike set-default --push latest
-          mkdocs gh-deploy --force
+          # mkdocs gh-deploy --force
