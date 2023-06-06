@@ -28,6 +28,6 @@ jobs:
           git config --global user.name kbsonlong
           git config --global user.email kbsonlong@gmail.com
           pip install -r requirements.txt
-          mike deploy --push --update-aliases 0.4 latest
+          mike deploy --push --update-aliases 0.5 latest
           mike set-default --push latest
           # mkdocs gh-deploy --force
