@@ -1,4 +1,14 @@
 site_name: DevOPS持续集成
+nav:
+- Home: index.md
+- User Guide:
+    # - index: user-guide/index.md
+    - Tracking and Deployment Strategies: user-guide/tracking_strategies.md
+- Blog:
+    - Introduction: blog/index.md
+- About:
+    - License: about/license.md
+    - Release Notes: about/release-notes.md
 theme:
   name: material
   custom_dir: overrides
@@ -32,7 +42,7 @@ theme:
 plugins:
   - social
   - search:
-      lang: zh
+      # lang: zh
       separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
   - offline:
       enabled: !ENV [OFFLINE, false]
