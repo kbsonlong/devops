@@ -16,8 +16,8 @@ nav:
     - Kube-Proxy: kubernetes/kube-proxy.md
     - Kubelet: kubernetes/kubelet.md
     - Kube-APIServer: kubernetes/kube-apiserver.md
-    - CNI: kubernetes/cni.md
-    - CSI: kubernetes/csi.md
+    - CNI浅析: kubernetes/cni.md
+    - CSI浅析: kubernetes/csi.md
     - Ingress:
       - Quick Start: ingress/Quick.md
     - Openkruise:
