@@ -2,7 +2,7 @@
  * @Author: kbsonlong kbsonlong@gmail.com
  * @Date: 2023-06-10 21:37:53
  * @LastEditors: kbsonlong kbsonlong@gmail.com
- * @LastEditTime: 2023-06-10 21:54:39
+ * @LastEditTime: 2023-06-10 22:03:30
  * @Description: 轻量日志采集Loki快速入门
  * Copyright (c) 2023 by kbsonlong, All Rights Reserved. 
 -->
@@ -106,7 +106,8 @@ config:
         kubernetes_sd_configs:
           - role: pod
         relabel_configs:
-          # prometheus.io/mongo.scrape: "true"
+          # 存在 app.kubernetes.io/name: "percona-server-mongodb" 标签的容器日志采集
+          # app.kubernetes.io/name: "percona-server-mongodb"
           - action: keep
             regex: percona-server-mongodb
             source_labels: [__meta_kubernetes_pod_label_app_kubernetes_io_name]
@@ -143,6 +144,7 @@ config:
             source_labels:
               - __meta_kubernetes_pod_node_name
             target_label: node_name
+          # 删除标签
           - action: labeldrop
             regex: (app|version|topology|statefulset|controller)_(.+)
           {{- if .Values.config.snippets.addScrapeJobLabel }}
@@ -152,15 +154,18 @@ config:
           {{- end }}
           {{- toYaml .Values.config.snippets.common | nindent 4 }}
     podPipelineStages:
+    # Container 是 mongos或者mongod的日志,且包含 `Slow query` 的日志采集
     - match:
         selector: '{container=~"mongos|mongod"} |= "Slow query"'
         action: keep
         stages:
           - docker: {}
+    # Container 是 mongos或者mongod的日志,但不包含 `Slow query` 的日志丢弃
     - match:
         selector: '{container=~"mongos|mongod"} != "Slow query"'
         action: drop
         drop_counter_reason: promtail_not_slow_query
+    # Container 不是 mongos或者mongod的日志丢弃
     - match:
         selector: '{container!~"mongos|mongod"}'
         action: drop
