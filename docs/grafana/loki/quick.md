@@ -2,7 +2,7 @@
  * @Author: kbsonlong kbsonlong@gmail.com
  * @Date: 2023-06-10 21:37:53
  * @LastEditors: kbsonlong kbsonlong@gmail.com
- * @LastEditTime: 2023-06-10 22:03:30
+ * @LastEditTime: 2023-06-10 22:07:37
  * @Description: 轻量日志采集Loki快速入门
  * Copyright (c) 2023 by kbsonlong, All Rights Reserved. 
 -->
@@ -75,14 +75,24 @@ minio:
     stroageClass: ebs-sc
 ```
 
+### 查看版本
+```bash
+# helm search repo grafana/loki -l | head -5
+NAME                        	CHART VERSION	APP VERSION	DESCRIPTION
+grafana/loki                	5.6.4        	2.8.2      	Helm chart for Grafana Loki in simple, scalable...
+grafana/loki                	5.6.3        	2.8.2      	Helm chart for Grafana Loki in simple, scalable...
+grafana/loki                	5.6.2        	2.8.2      	Helm chart for Grafana Loki in simple, scalable...
+grafana/loki                	5.6.1        	2.8.2      	Helm chart for Grafana Loki in simple, scalable...
+```
+
 ### 部署 loki
 
 ```bash
-helm install loki grafana/loki -n loki --create-namespace -f loki-values.yaml
+helm install loki grafana/loki -n loki --version 5.6.4 --create-namespace -f loki-values.yaml
 ```
 ### 更新
 ```bash
-helm upgrade --install loki grafana/loki -n loki --create-namespace -f loki-values.yaml
+helm upgrade --install loki grafana/loki -n loki --version 5.6.4 --create-namespace -f loki-values.yaml
 ```
 
 
@@ -216,7 +226,16 @@ resources:
 ### 部署 promtail
 
 ```bash
-helm install promtail grafana/promtail -n loki -f promtail-values.yaml
+# helm search repo grafana/promtail -l | head -5
+NAME            	CHART VERSION	APP VERSION	DESCRIPTION
+grafana/promtail	6.11.3       	2.8.2      	Promtail is an agent which ships the contents o...
+grafana/promtail	6.11.2       	2.8.2      	Promtail is an agent which ships the contents o...
+grafana/promtail	6.11.1       	2.7.4      	Promtail is an agent which ships the contents o...
+grafana/promtail	6.11.0       	2.7.4      	Promtail is an agent which ships the contents o...
+```
+
+```bash
+helm install promtail grafana/promtail -n loki --version 6.11.3 -f promtail-values.yaml
 ```
 
 ## 安装 `Grafana`
@@ -228,8 +247,17 @@ service:
 ```
 
 ### 部署 grafana
+
+
 ```bash
-helm install grafana grafana/grafana -n loki -f grafana-values.yaml
+# helm search repo grafana/grafana -l | head -5
+NAME                          	CHART VERSION	APP VERSION	DESCRIPTION
+grafana/grafana               	6.57.1       	9.5.3      	The leading tool for querying and visualizing t...
+grafana/grafana               	6.57.0       	9.5.2      	The leading tool for querying and visualizing t...
+grafana/grafana               	6.56.6       	9.5.2      	The leading tool for querying and visualizing t...
+grafana/grafana               	6.56.5       	9.5.2      	The leading tool for querying and visualizing t...
+
+# helm install grafana grafana/grafana -n loki -f grafana-values.yaml
 ```
 
 
