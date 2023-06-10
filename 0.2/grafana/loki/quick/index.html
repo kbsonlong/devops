@@ -1060,6 +1060,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    查看版本
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#loki_2" class="md-nav__link">
     部署 loki
   </a>
@@ -1067,7 +1074,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     更新
   </a>
   
@@ -1674,6 +1681,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    查看版本
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#loki_2" class="md-nav__link">
     部署 loki
   </a>
@@ -1681,7 +1695,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     更新
   </a>
   
@@ -1776,7 +1790,7 @@
  * @Author: kbsonlong kbsonlong@gmail.com
  * @Date: 2023-06-10 21:37:53
  * @LastEditors: kbsonlong kbsonlong@gmail.com
- * @LastEditTime: 2023-06-10 22:03:30
+ * @LastEditTime: 2023-06-10 22:07:37
  * @Description: 轻量日志采集Loki快速入门
  * Copyright (c) 2023 by kbsonlong, All Rights Reserved. 
 -->
@@ -1842,11 +1856,19 @@ minio:
     size: 50Gi
     stroageClass: ebs-sc
 </code></pre>
-<h3 id="loki_2">部署 loki</h3>
-<pre><code class="language-bash">helm install loki grafana/loki -n loki --create-namespace -f loki-values.yaml
+<h3 id="_1">查看版本</h3>
+<pre><code class="language-bash"># helm search repo grafana/loki -l | head -5
+NAME                            CHART VERSION   APP VERSION DESCRIPTION
+grafana/loki                    5.6.4           2.8.2       Helm chart for Grafana Loki in simple, scalable...
+grafana/loki                    5.6.3           2.8.2       Helm chart for Grafana Loki in simple, scalable...
+grafana/loki                    5.6.2           2.8.2       Helm chart for Grafana Loki in simple, scalable...
+grafana/loki                    5.6.1           2.8.2       Helm chart for Grafana Loki in simple, scalable...
 </code></pre>
-<h3 id="_1">更新</h3>
-<pre><code class="language-bash">helm upgrade --install loki grafana/loki -n loki --create-namespace -f loki-values.yaml
+<h3 id="loki_2">部署 loki</h3>
+<pre><code class="language-bash">helm install loki grafana/loki -n loki --version 5.6.4 --create-namespace -f loki-values.yaml
+</code></pre>
+<h3 id="_2">更新</h3>
+<pre><code class="language-bash">helm upgrade --install loki grafana/loki -n loki --version 5.6.4 --create-namespace -f loki-values.yaml
 </code></pre>
 <h2 id="promtail">安装 <code>Promtail</code> 日志收集器</h2>
 <h3 id="promtail-valuesyaml">promtail-values.yaml</h3>
@@ -1972,7 +1994,14 @@ resources:
 
 </code></pre>
 <h3 id="promtail_1">部署 promtail</h3>
-<pre><code class="language-bash">helm install promtail grafana/promtail -n loki -f promtail-values.yaml
+<pre><code class="language-bash"># helm search repo grafana/promtail -l | head -5
+NAME                CHART VERSION   APP VERSION DESCRIPTION
+grafana/promtail    6.11.3          2.8.2       Promtail is an agent which ships the contents o...
+grafana/promtail    6.11.2          2.8.2       Promtail is an agent which ships the contents o...
+grafana/promtail    6.11.1          2.7.4       Promtail is an agent which ships the contents o...
+grafana/promtail    6.11.0          2.7.4       Promtail is an agent which ships the contents o...
+</code></pre>
+<pre><code class="language-bash">helm install promtail grafana/promtail -n loki --version 6.11.3 -f promtail-values.yaml
 </code></pre>
 <h2 id="grafana">安装 <code>Grafana</code></h2>
 <h3 id="grafana-valuesyaml">grafana-values.yaml</h3>
@@ -1980,7 +2009,14 @@ resources:
   type: NodePort
 </code></pre>
 <h3 id="grafana_1">部署 grafana</h3>
-<pre><code class="language-bash">helm install grafana grafana/grafana -n loki -f grafana-values.yaml
+<pre><code class="language-bash"># helm search repo grafana/grafana -l | head -5
+NAME                            CHART VERSION   APP VERSION DESCRIPTION
+grafana/grafana                 6.57.1          9.5.3       The leading tool for querying and visualizing t...
+grafana/grafana                 6.57.0          9.5.2       The leading tool for querying and visualizing t...
+grafana/grafana                 6.56.6          9.5.2       The leading tool for querying and visualizing t...
+grafana/grafana                 6.56.5          9.5.2       The leading tool for querying and visualizing t...
+
+# helm install grafana grafana/grafana -n loki -f grafana-values.yaml
 </code></pre>
 <ul>
 <li>Grafana 添加 <code>loki</code> 数据源</li>
