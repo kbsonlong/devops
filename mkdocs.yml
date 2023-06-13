@@ -45,6 +45,7 @@ nav:
 - 博客:
     - Introduction: blog/index.md
 - 关于:
+    - 个人简介: about/me.md
     - License: about/license.md
 theme:
   font:
