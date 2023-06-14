@@ -1932,12 +1932,12 @@
  * @Author: kbsonlong kbsonlong@gmail.com
  * @Date: 2023-06-14 16:58:26
  * @LastEditors: kbsonlong kbsonlong@gmail.com
- * @LastEditTime: 2023-06-14 17:58:32
+ * @LastEditTime: 2023-06-14 18:09:25
  * @Description: Loki系统架构
  * Copyright (c) 2023 by kbsonlong, All Rights Reserved. 
 -->
 <h1 id="loki">Loki 系统架构</h1>
-<p><img alt="loki-architecture" src="https://raw.githubusercontent.com/kbsonlong/notes_statics/master/images/20230614171059.png" /></p>
+<p><img alt="loki-architecture" src="https://raw.githubusercontent.com/kbsonlong/notes_statics/master/images/20230614180902.png" /></p>
 <h2 id="loki_1">Loki 组件</h2>
 <h3 id="distributor">Distributor (分发器)</h3>
 <p><code>Distributor</code> 服务负责处理客户端写入的日志，它本质上是日志数据写入路径中的入口，一旦 <code>Distributor</code> 收到日志数据，会将其拆分为多个批次，然后并行发送给多个 <code>Ingester</code> 。 <code>Distributor</code> 通过 <code>gRPC</code> 与 <code>Ingester</code> 通信，它们都是无状态的，所以可以根据需要扩大或缩小规模。</p>
