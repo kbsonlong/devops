@@ -28,6 +28,7 @@ nav:
       - Quick Start: prometheus/Quick.md
     - Grafana:
       - loki: grafana/loki/quick.md
+      - Loki系统架构 grafana/loki/architecture.md
     - VictoriaMetrics:
       - Quick Start: victoriametrics/Quick.md
     - Harbor:
