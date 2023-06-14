@@ -2,7 +2,7 @@
  * @Author: kbsonlong kbsonlong@gmail.com
  * @Date: 2023-06-14 16:58:26
  * @LastEditors: kbsonlong kbsonlong@gmail.com
- * @LastEditTime: 2023-06-14 18:22:46
+ * @LastEditTime: 2023-06-14 20:32:16
  * @Description: Loki系统架构
  * Copyright (c) 2023 by kbsonlong, All Rights Reserved. 
 -->
@@ -40,7 +40,7 @@ floor(replication_factor / 2) + 1
 
 #### Quorum consistency
 
-### Ingester
+### Ingester (提取器)
 
 `Ingester` 服务负责将日志数据写入存储后端（DynamoDB、S3、Cassandra ）。此外 `Ingester` 会验证摄取的日志行是否按照时间戳递增的顺序接收的（即每条日志的时间戳都比前面的日志晚一些），当 `Ingester`  收到不符合这个顺序的日志时，该日志行会被拒绝并返回一个错误。
 
