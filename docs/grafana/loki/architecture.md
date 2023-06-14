@@ -2,14 +2,13 @@
  * @Author: kbsonlong kbsonlong@gmail.com
  * @Date: 2023-06-14 16:58:26
  * @LastEditors: kbsonlong kbsonlong@gmail.com
- * @LastEditTime: 2023-06-14 17:58:32
+ * @LastEditTime: 2023-06-14 18:09:25
  * @Description: Loki系统架构
  * Copyright (c) 2023 by kbsonlong, All Rights Reserved. 
 -->
 # Loki 系统架构
 
-![loki-architecture](https://raw.githubusercontent.com/kbsonlong/notes_statics/master/images/20230614171059.png)
-
+![loki-architecture](https://raw.githubusercontent.com/kbsonlong/notes_statics/master/images/20230614180902.png)
 ## Loki 组件
 
 ### Distributor (分发器)
