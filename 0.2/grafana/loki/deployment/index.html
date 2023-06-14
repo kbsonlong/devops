@@ -9,17 +9,13 @@
       
       
       
-        <link rel="prev" href="../quick/">
-      
-      
-        <link rel="next" href="../../../victoriametrics/Quick/">
       
       <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.15">
     
     
       
-        <title>Loki系统架构 - 运维笔记</title>
+        <title>Deployment - 运维笔记</title>
       
     
     
@@ -51,11 +47,11 @@
       
         <meta  property="og:type"  content="website" >
       
-        <meta  property="og:title"  content="Loki系统架构 - 运维笔记" >
+        <meta  property="og:title"  content="Deployment - 运维笔记" >
       
         <meta  property="og:description"  content="None" >
       
-        <meta  property="og:image"  content="./assets/images/social/grafana/loki/architecture.png" >
+        <meta  property="og:image"  content="./assets/images/social/grafana/loki/deployment.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -67,11 +63,11 @@
       
         <meta  name="twitter:card"  content="summary_large_image" >
       
-        <meta  name="twitter:title"  content="Loki系统架构 - 运维笔记" >
+        <meta  name="twitter:title"  content="Deployment - 运维笔记" >
       
         <meta  name="twitter:description"  content="None" >
       
-        <meta  name="twitter:image"  content="./assets/images/social/grafana/loki/architecture.png" >
+        <meta  name="twitter:image"  content="./assets/images/social/grafana/loki/deployment.png" >
       
     
     
@@ -97,7 +93,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#loki" class="md-skip">
+        <a href="#deployment-mode" class="md-skip">
           跳转至
         </a>
       
@@ -136,7 +132,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Loki系统架构
+              Deployment
             
           </span>
         </div>
@@ -288,15 +284,13 @@
         
   
   
-    
-  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../../../user-guide/Quick/" class="md-tabs__link md-tabs__link--active">
+      <a href="../../../user-guide/Quick/" class="md-tabs__link">
         云原生
       </a>
     </li>
@@ -852,16 +846,16 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
       
       
         
@@ -886,7 +880,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_4">
           <span class="md-nav__icon md-icon"></span>
           云原生
@@ -967,18 +961,18 @@
               
   
   
-    
-  
   
     
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" checked>
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_3" >
       
       
         
@@ -993,7 +987,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="true">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_4_3">
           <span class="md-nav__icon md-icon"></span>
           Grafana
@@ -1018,202 +1012,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Loki系统架构
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../architecture/" class="md-nav__link">
         Loki系统架构
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#loki_1" class="md-nav__link">
-    Loki 组件
-  </a>
-  
-    <nav class="md-nav" aria-label="Loki 组件">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#distributor" class="md-nav__link">
-    Distributor (分发器)
-  </a>
-  
-    <nav class="md-nav" aria-label="Distributor (分发器)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#validation" class="md-nav__link">
-    Validation (校验)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#preprocessing" class="md-nav__link">
-    Preprocessing (预处理)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#rate-limiting" class="md-nav__link">
-    Rate limiting (限速)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#forwarding" class="md-nav__link">
-    Forwarding (转发)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#replication-factor" class="md-nav__link">
-    Replication factor (副本)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#hashing" class="md-nav__link">
-    Hashing
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#quorum-consistency" class="md-nav__link">
-    Quorum consistency
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ingester" class="md-nav__link">
-    Ingester (提取器)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#querier" class="md-nav__link">
-    Querier (查询器)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#query-frontend" class="md-nav__link">
-    Query frontend
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    数据处理流程
-  </a>
-  
-    <nav class="md-nav" aria-label="数据处理流程">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    数据读取
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    数据写入
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    部署模式
-  </a>
-  
-    <nav class="md-nav" aria-label="部署模式">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    单体模式
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    读写分离模式
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    微服务模式
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1746,153 +1549,23 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#loki_1" class="md-nav__link">
-    Loki 组件
+  <a href="#run-alias" class="md-nav__link">
+    Run Alias
   </a>
   
-    <nav class="md-nav" aria-label="Loki 组件">
+    <nav class="md-nav" aria-label="Run Alias">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#distributor" class="md-nav__link">
-    Distributor (分发器)
-  </a>
-  
-    <nav class="md-nav" aria-label="Distributor (分发器)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#validation" class="md-nav__link">
-    Validation (校验)
+  <a href="#write" class="md-nav__link">
+    write
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#preprocessing" class="md-nav__link">
-    Preprocessing (预处理)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#rate-limiting" class="md-nav__link">
-    Rate limiting (限速)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#forwarding" class="md-nav__link">
-    Forwarding (转发)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#replication-factor" class="md-nav__link">
-    Replication factor (副本)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#hashing" class="md-nav__link">
-    Hashing
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#quorum-consistency" class="md-nav__link">
-    Quorum consistency
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ingester" class="md-nav__link">
-    Ingester (提取器)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#querier" class="md-nav__link">
-    Querier (查询器)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#query-frontend" class="md-nav__link">
-    Query frontend
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    数据处理流程
-  </a>
-  
-    <nav class="md-nav" aria-label="数据处理流程">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    数据读取
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    数据写入
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    部署模式
-  </a>
-  
-    <nav class="md-nav" aria-label="部署模式">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    单体模式
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    读写分离模式
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    微服务模式
+  <a href="#backend" class="md-nav__link">
+    backend
   </a>
   
 </li>
@@ -1920,7 +1593,7 @@
 
 
   
-    <a href="https://github.com/kbsonlong/argo/edit/master/docs/grafana/loki/architecture.md" title="编辑此页" class="md-content__button md-icon">
+    <a href="https://github.com/kbsonlong/argo/edit/master/docs/grafana/loki/deployment.md" title="编辑此页" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
     </a>
@@ -1930,77 +1603,87 @@
 
 <!--
  * @Author: kbsonlong kbsonlong@gmail.com
- * @Date: 2023-06-14 16:58:26
+ * @Date: 2023-06-14 22:23:07
  * @LastEditors: kbsonlong kbsonlong@gmail.com
- * @LastEditTime: 2023-06-14 20:32:16
- * @Description: Loki系统架构
+ * @LastEditTime: 2023-06-14 22:30:36
+ * @Description: Depoliment Mode
  * Copyright (c) 2023 by kbsonlong, All Rights Reserved. 
 -->
-<h1 id="loki">Loki 系统架构</h1>
-<p><img alt="loki-architecture" src="https://raw.githubusercontent.com/kbsonlong/notes_statics/master/images/20230614180902.png" /></p>
-<h2 id="loki_1">Loki 组件</h2>
-<h3 id="distributor">Distributor (分发器)</h3>
-<p><code>Distributor</code> 服务负责处理客户端写入的日志，它本质上是日志数据写入路径中的入口，一旦 <code>Distributor</code> 收到日志数据，会将其拆分为多个批次，然后并行发送给多个 <code>Ingester</code> 。 <code>Distributor</code> 通过 <code>gRPC</code> 与 <code>Ingester</code> 通信，它们都是无状态的，所以可以根据需要扩大或缩小规模。</p>
-<h4 id="validation">Validation (校验)</h4>
-<p><code>Distributor</code>  第一步是确保所有传入数据均符合规范。这包括检查标签是否是有效的 Prometheus 标签，以及确保时间戳不会太旧或太新，或者日志行不会太长。</p>
-<h4 id="preprocessing">Preprocessing (预处理)</h4>
-<p>规范化标签,对标签进行排序,从而能够准确的命中 <code>cache</code> 和 <code>hash</code>。</p>
-<h4 id="rate-limiting">Rate limiting (限速)</h4>
-<p><code>Distributor</code> 可以根据每个租户的最大比特率对传入日志进行速率限制。 它通过检查每个租户的限制并将其除以当前的 <code>Distributor</code> 数量。 这允许在集群级别为每个租户指定速率限制，并使我们能够向上或向下扩展 <code>Distributor</code>，并相应地调整每个 <code>Distributor</code> 的限制</p>
-<h4 id="forwarding">Forwarding (转发)</h4>
-<p><code>Distributor</code> 验证通过后，它就会将数据转发到最终负责确认写入的 <code>Ingester</code> 组件。</p>
-<h4 id="replication-factor">Replication factor (副本)</h4>
-<p>为了减少在任何单个 <code>Ingester</code> 上丢失数据的机会，<code>Distributor</code> 会将写入转发到它们的 <code>replication_factor</code> 。默认 <code>3</code> 副本。副本允许  <code>Ingester</code>  重新启动和推出而不会导致写入失败，并在某些情况下增加额外的数据丢失保护。</p>
-<p>floor(replication_factor / 2) + 1</p>
-<h4 id="hashing">Hashing</h4>
-<p><code>Distributor</code> 将一致性Hash和可配置的复制因子结合使用，以确定 <code>Ingester</code> 服务的哪些实例应该接收指定的数据流。</p>
-<p>流是一组与租户和唯一标签集关联的日志，使用租户 ID 和标签集对流进行 hash 处理，然后使用哈希查询要发送流的 <code>Ingester</code></p>
-<h4 id="quorum-consistency">Quorum consistency</h4>
-<h3 id="ingester">Ingester (提取器)</h3>
-<p><code>Ingester</code> 服务负责将日志数据写入存储后端（DynamoDB、S3、Cassandra ）。此外 <code>Ingester</code> 会验证摄取的日志行是否按照时间戳递增的顺序接收的（即每条日志的时间戳都比前面的日志晚一些），当 <code>Ingester</code>  收到不符合这个顺序的日志时，该日志行会被拒绝并返回一个错误。</p>
-<ul>
-<li>
-<p>如果传入的行与之前收到的行完全匹配（与之前的时间戳和日志文本都匹配），传入的行将被视为完全重复并被忽略。</p>
-</li>
-<li>
-<p>如果传入的行与前一行的时间戳相同，但内容不同，则接受该日志行，表示同一时间戳有两个不同的日志行是可能的。</p>
-</li>
-</ul>
-<h3 id="querier">Querier (查询器)</h3>
-<p><code>Querier</code> 接收日志数据查询、聚合统计请求，使用 <code>LogQL</code> 查询语言处理查询，从 <code>ingester</code> 和长期存储中获取日志。</p>
-<p>查询器查询所有 <code>ingester</code> 的内存数据，然后再到后端存储运行相同的查询。由于复制因子，查询器有可能会收到重复的数据。为了解决这个问题，查询器在内部对具有相同纳秒时间戳、标签集和日志信息的数据进行重复数据删除。</p>
-<h3 id="query-frontend">Query frontend</h3>
-<p><code>Query Frontend</code> 查询前端是一个可选的服务，可以用来加速读取路径。当查询前端就位时，将传入的查询请求定向到查询前端，而不是 <code>querier</code>, 为了执行实际的查询，群集中仍需要 <code>querier</code> 服务。</p>
-<p>查询前端在内部执行一些查询调整，并在内部队列中保存查询。<code>querier</code> 作为 <code>workers</code> 从队列中提取作业，执行它们，并将它们返回到查询前端进行汇总。<code>querier</code> 需要配置查询前端地址，以便允许它们连接到查询前端。</p>
-<p>查询前端是无状态的，然而，由于内部队列的工作方式，建议运行几个查询前台的副本，以获得公平调度的好处，在大多数情况下，两个副本应该足够了。</p>
-<h2 id="_1">数据处理流程</h2>
-<h3 id="_2">数据读取</h3>
-<ol>
-<li>查询器收到一个 HTTP/1 数据请求。</li>
-<li>查询器将查询传递给内存中数据的所有 <code>Ingester</code> 。</li>
-<li><code>Ingester</code> 接收读取请求并返回与查询匹配的数据（如果有）。</li>
-<li>如果没有 <code>Ingester</code> 返回数据，查询器会从后备存储中延迟加载数据并对其运行查询。</li>
-<li>查询器遍历所有接收到的数据并删除重复数据，通过 HTTP/1 连接返回一组最终数据。</li>
-</ol>
-<h3 id="_3">数据写入</h3>
-<p><img alt="loki-write" src="https://raw.githubusercontent.com/kbsonlong/notes_statics/master/images/20230614175539.png" /></p>
-<ol>
-<li><code>Distributor</code>收到 HTTP/1 请求以存储流数据。</li>
-<li>每个流都使用哈希环进行哈希处理。</li>
-<li><code>Distributor</code>将每个流发送到适当的<code>Ingester</code>及其副本（基于配置的复制因子）。</li>
-<li>每个<code>Ingester</code>将为流的数据创建一个块或附加到现有块。每个租户和每个标签集的块都是唯一的。</li>
-<li>分发者通过 HTTP/1 连接以成功代码响应。</li>
-</ol>
-<h2 id="_4">部署模式</h2>
-<h3 id="_5">单体模式</h3>
-<p>单体模式适用于快速开始体验 Loki 进行实验以及每天最多约 100GB 的小读/写量场景。</p>
-<p><img alt="loki-all" src="https://raw.githubusercontent.com/kbsonlong/notes_statics/master/images/20230614165956.png" /></p>
-<h3 id="_6">读写分离模式</h3>
-<p>当日志量每天超过几百 GB，或者希望分离读写，Loki 提供了简单的读写分离可扩展部署模式。这种部署模式可以扩展到每天数 TB 的日志。</p>
-<p><img alt="loki-read-write" src="https://raw.githubusercontent.com/kbsonlong/notes_statics/master/images/20230614170049.png" /></p>
-<h3 id="_7">微服务模式</h3>
-<p>每个组件独立部署，适用于超大型日志收集。
-<img alt="loki-Microservices" src="https://raw.githubusercontent.com/kbsonlong/notes_statics/master/images/20230614170128.png" /></p>
+
+<h1 id="deployment-mode">Deployment Mode</h1>
+<h2 id="run-alias">Run Alias</h2>
+<pre><code class="language-bash">/ $ /usr/bin/loki -config.file=/etc/loki/config/config.yaml -list-targets
+all
+  cache-generation-loader
+  compactor
+  distributor
+  ingester
+  ingester-querier
+  querier
+  query-frontend
+  query-scheduler
+  ruler
+  usage-report
+backend
+  compactor
+  index-gateway
+  ingester-querier
+  query-scheduler
+  ruler
+  usage-report
+cache-generation-loader
+compactor
+  usage-report
+distributor
+  usage-report
+index-gateway
+  usage-report
+ingester
+  usage-report
+ingester-querier
+overrides-exporter
+querier
+  cache-generation-loader
+  ingester-querier
+  query-scheduler
+  usage-report
+query-frontend
+  cache-generation-loader
+  query-scheduler
+  usage-report
+query-scheduler
+  usage-report
+read
+  cache-generation-loader
+  compactor
+  index-gateway
+  ingester-querier
+  querier
+  query-frontend
+  query-scheduler
+  ruler
+  usage-report
+ruler
+  ingester-querier
+  usage-report
+table-manager
+  usage-report
+usage-report
+write
+  distributor
+  ingester
+  usage-report
+</code></pre>
+<h3 id="write">write</h3>
+<pre><code class="language-bash">/ $ ps -ef |grep loki
+    1 loki     35:20 /usr/bin/loki -config.file=/etc/loki/config/config.yaml -target=write
+</code></pre>
+<p>这个进程运行组件包含 <code>distributor</code>,<code>ingester</code> 和 <code>usage-report</code></p>
+<h3 id="backend">backend</h3>
+<pre><code class="language-bash">/ $ ps -ef |grep loki
+    1 loki     31:45 /usr/bin/loki -config.file=/etc/loki/config/config.yaml -target=backend -legacy-read-mode=false
+</code></pre>
+<p>这个进程运行组件包含 <code>compactor</code>,<code>index-gateway</code>,<code>ingester-querier</code>,<code>query-scheduler</code>,<code>ruler</code> 和 <code>usage-report</code></p>
 
 
 
@@ -2022,42 +1705,6 @@
       
         <footer class="md-footer">
   
-    
-      
-      <nav class="md-footer__inner md-grid" aria-label="页脚" >
-        
-          
-          <a href="../quick/" class="md-footer__link md-footer__link--prev" aria-label="上一页: loki" rel="prev">
-            <div class="md-footer__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-            </div>
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                上一页
-              </span>
-              <div class="md-ellipsis">
-                loki
-              </div>
-            </div>
-          </a>
-        
-        
-          
-          <a href="../../../victoriametrics/Quick/" class="md-footer__link md-footer__link--next" aria-label="下一页: Quick Start" rel="next">
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                下一页
-              </span>
-              <div class="md-ellipsis">
-                Quick Start
-              </div>
-            </div>
-            <div class="md-footer__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
     
   
   <div class="md-footer-meta md-typeset">
