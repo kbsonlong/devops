@@ -2,7 +2,7 @@
  * @Author: kbsonlong kbsonlong@gmail.com
  * @Date: 2023-06-10 21:37:53
  * @LastEditors: kbsonlong kbsonlong@gmail.com
- * @LastEditTime: 2023-06-13 18:34:50
+ * @LastEditTime: 2023-06-21 10:16:06
  * @Description: 轻量日志采集Loki快速入门
  * Copyright (c) 2023 by kbsonlong, All Rights Reserved. 
 -->
